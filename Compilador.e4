@@ -1,0 +1,17 @@
+grammar Compilador;
+
+rodar: Api ATRIB ID;
+
+group : testGroup '=' '(' ID ',' test '(' ID ')' ',' Api ',' path ',' Status ','  dataType? ')' ';' ;
+
+Status: '=' [0-9]* ;
+
+Api : [a-zA-Z]* ;
+
+ATRIB : '=';
+
+ID : '-'?[0-9]+ ;
+
+SPACE : (' ' | '\n' | '\t') -> skip ;
+
+
